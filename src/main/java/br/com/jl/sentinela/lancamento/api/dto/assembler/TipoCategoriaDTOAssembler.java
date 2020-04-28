@@ -1,10 +1,11 @@
-package br.com.jl.sentinela.tipocategoria.domain.model.dto;
+package br.com.jl.sentinela.lancamento.api.dto.assembler;
 
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
 import org.springframework.stereotype.Component;
 
-import br.com.jl.sentinela.tipocategoria.api.TipoCategoriaController;
-import br.com.jl.sentinela.tipocategoria.domain.model.TipoCategoria;
+import br.com.jl.sentinela.lancamento.api.TipoCategoriaController;
+import br.com.jl.sentinela.lancamento.api.dto.TipoCategoriaDTO;
+import br.com.jl.sentinela.lancamento.domain.model.TipoCategoria;
 
 @Component
 public class TipoCategoriaDTOAssembler extends RepresentationModelAssemblerSupport<TipoCategoria, TipoCategoriaDTO> {

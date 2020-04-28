@@ -1,11 +1,16 @@
-package br.com.jl.sentinela.tipocategoria.domain.model;
+package br.com.jl.sentinela.lancamento.domain.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotBlank;
+
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,7 +24,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class TipoCategoria {
+public class Categoria {
 
 	@EqualsAndHashCode.Include
 	@Id
@@ -29,4 +34,9 @@ public class TipoCategoria {
 	@NotBlank
 	@Column(nullable = false)
 	private String nome;
+	
+	@ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "idTipoCategoria")
+    @JsonBackReference
+    private TipoCategoria tipoCategoria;
 }

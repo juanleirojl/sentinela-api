@@ -1,10 +1,10 @@
-package br.com.jl.sentinela.tipocategoria.api;
+package br.com.jl.sentinela.lancamento.api.doc;
 
 import org.springframework.beans.factory.parsing.Problem;
 import org.springframework.data.domain.Pageable;
 import org.springframework.hateoas.PagedModel;
 
-import br.com.jl.sentinela.tipocategoria.domain.model.dto.TipoCategoriaDTO;
+import br.com.jl.sentinela.lancamento.api.dto.TipoCategoriaDTO;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
