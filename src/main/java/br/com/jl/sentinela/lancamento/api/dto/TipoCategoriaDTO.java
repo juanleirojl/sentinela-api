@@ -1,4 +1,4 @@
-package br.com.jl.sentinela.tipocategoria.domain.model.dto;
+package br.com.jl.sentinela.lancamento.api.dto;
 
 import java.io.Serializable;
 
@@ -6,7 +6,7 @@ import javax.validation.constraints.NotBlank;
 
 import org.springframework.hateoas.RepresentationModel;
 
-import br.com.jl.sentinela.tipocategoria.domain.model.TipoCategoria;
+import br.com.jl.sentinela.lancamento.domain.model.TipoCategoria;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

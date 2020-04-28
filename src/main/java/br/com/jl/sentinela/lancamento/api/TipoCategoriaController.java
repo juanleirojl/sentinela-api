@@ -1,4 +1,4 @@
-package br.com.jl.sentinela.tipocategoria.api;
+package br.com.jl.sentinela.lancamento.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -11,15 +11,16 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.jl.sentinela.tipocategoria.domain.model.TipoCategoria;
-import br.com.jl.sentinela.tipocategoria.domain.model.TipoCategoriaRepository;
-import br.com.jl.sentinela.tipocategoria.domain.model.dto.TipoCategoriaDTO;
-import br.com.jl.sentinela.tipocategoria.domain.model.dto.TipoCategoriaDTOAssembler;
+import br.com.jl.sentinela.lancamento.api.doc.TipoCategoriaControllerAPI;
+import br.com.jl.sentinela.lancamento.api.dto.TipoCategoriaDTO;
+import br.com.jl.sentinela.lancamento.api.dto.assembler.TipoCategoriaDTOAssembler;
+import br.com.jl.sentinela.lancamento.domain.model.TipoCategoria;
+import br.com.jl.sentinela.lancamento.domain.model.TipoCategoriaRepository;
 import io.swagger.annotations.Api;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/api")
+@RequestMapping("/api/v1/tiposcategoria")
 @Api(tags = "Tipos Categoria")
 public class TipoCategoriaController implements TipoCategoriaControllerAPI{
 	
