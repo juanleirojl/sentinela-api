@@ -1,4 +1,4 @@
-package br.com.jl.sentinela.api.shared.configuration;
+package br.com.jl.sentinela.core.modelmapper;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

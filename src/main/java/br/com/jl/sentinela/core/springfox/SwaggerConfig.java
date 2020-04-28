@@ -1,4 +1,4 @@
-package br.com.jl.sentinela.api.shared.configuration;
+package br.com.jl.sentinela.core.springfox;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import com.fasterxml.classmate.TypeResolver;
 import com.google.common.base.Predicate;
 
-import br.com.jl.sentinela.api.shared.exceptionhandler.Erro;
+import br.com.jl.sentinela.api.Erro;
 import springfox.documentation.RequestHandler;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -65,7 +65,7 @@ public class SwaggerConfig {
     
     
     private Predicate<RequestHandler> apis() {
-    	return RequestHandlerSelectors.basePackage("br.com.jl.ordemservico.api");
+    	return RequestHandlerSelectors.basePackage("br.com.jl.sentinela");
     }
     
     private ApiInfo apiInfo() {

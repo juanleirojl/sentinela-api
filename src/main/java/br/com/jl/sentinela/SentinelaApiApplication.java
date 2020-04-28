@@ -1,4 +1,4 @@
-package br.com.jl.sentinela.api;
+package br.com.jl.sentinela;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

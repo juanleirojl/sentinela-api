@@ -1,4 +1,4 @@
-package br.com.jl.sentinela.api.shared.configuration.springfox;
+package br.com.jl.sentinela.core.springfox.adapter;
 
 import static com.google.common.base.Optional.fromNullable;
 import static springfox.documentation.schema.Collections.containerType;

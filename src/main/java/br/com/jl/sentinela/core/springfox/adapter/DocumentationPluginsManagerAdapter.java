@@ -1,4 +1,4 @@
-package br.com.jl.sentinela.api.shared.configuration.springfox;
+package br.com.jl.sentinela.core.springfox.adapter;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
