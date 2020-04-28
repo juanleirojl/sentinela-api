@@ -1,4 +1,4 @@
-package br.com.jl.sentinela.api.shared.exceptionhandler;
+package br.com.jl.sentinela.api;
 
 import lombok.Getter;
 
