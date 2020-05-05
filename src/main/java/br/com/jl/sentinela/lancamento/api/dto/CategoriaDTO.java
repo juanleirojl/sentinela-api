@@ -33,14 +33,14 @@ public class CategoriaDTO extends RepresentationModel<CategoriaDTO> implements S
 	
 	@NotBlank
 	@ApiModelProperty(example = "Conta de Luz")
-	private TipoCategoriaDTO tipoCategoria;
+	private ContaDTO tipoCategoria;
 	
 	
 	public static CategoriaDTO toModel(Categoria categoria) {
 		return CategoriaDTO.builder()
 				.id(categoria.getId())
 				.nome(categoria.getNome())
-				.tipoCategoria(TipoCategoriaDTO.toModel(categoria.getTipoCategoria()))
+				//.tipoCategoria(ContaDTO.toModel(categoria.getTipoCategoria()))
 				.build();
 	}
 	
@@ -48,7 +48,7 @@ public class CategoriaDTO extends RepresentationModel<CategoriaDTO> implements S
 		return Categoria.builder()
 				.id(categoriaDTO.getId())
 				.nome(categoriaDTO.getNome())
-				.tipoCategoria(TipoCategoriaDTO.toEntity(categoriaDTO.getTipoCategoria()))
+				///.tipoCategoria(ContaDTO.toEntity(categoriaDTO.getTipoCategoria()))
 				.build();
 	}
 
