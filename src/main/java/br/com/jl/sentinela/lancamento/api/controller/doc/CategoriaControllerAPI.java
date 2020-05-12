@@ -1,4 +1,4 @@
-package br.com.jl.sentinela.lancamento.api.doc;
+package br.com.jl.sentinela.lancamento.api.controller.doc;
 
 import org.springframework.beans.factory.parsing.Problem;
 import org.springframework.data.domain.Pageable;

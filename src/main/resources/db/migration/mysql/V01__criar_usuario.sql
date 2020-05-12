@@ -14,4 +14,5 @@ CREATE TABLE IF NOT EXISTS usuario (
     AUTO_INCREMENT = 6
     DEFAULT CHARACTER SET = utf8;
 
+
 insert into usuario values (1,'Juan Leiro','juan.leiro@gmailc.com','123',1,now());

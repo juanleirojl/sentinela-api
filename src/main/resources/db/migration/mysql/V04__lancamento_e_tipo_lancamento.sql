@@ -2,7 +2,7 @@
 -- Table tipolancamento
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS tipolancamento (
-       id INT NOT NULL,
+       id INT NOT NULL AUTO_INCREMENT,
        nome NVARCHAR(255) NOT NULL,
        dataCriacao DATETIME NOT NULL,
        PRIMARY KEY (id))
@@ -14,7 +14,7 @@ insert into tipolancamento values (2,'DESPESA',now());
 -- Table lancamento
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS lancamento (
-    id INT NOT NULL,
+    id INT NOT NULL AUTO_INCREMENT,
     descricao NVARCHAR(255) NOT NULL,
     valor DECIMAL(10,2) NOT NULL,
     dataPagamento DATETIME NOT NULL,

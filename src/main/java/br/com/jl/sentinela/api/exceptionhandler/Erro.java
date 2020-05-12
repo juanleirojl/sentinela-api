@@ -1,14 +1,13 @@
-package br.com.jl.sentinela.api;
-import java.time.OffsetDateTime;
-import java.util.List;
-
+package br.com.jl.sentinela.api.exceptionhandler;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
-
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Builder;
 import lombok.Getter;
+
+import java.time.OffsetDateTime;
+import java.util.List;
 
 @ApiModel("Erro")
 @JsonInclude(Include.NON_NULL)
@@ -22,7 +21,7 @@ public class Erro {
 	@ApiModelProperty(example = "2019-12-01T18:09:02.70844Z", position = 5)
 	private OffsetDateTime timestamp;
 	
-	@ApiModelProperty(example = "https://algafood.com.br/dados-invalidos", position = 10)
+	@ApiModelProperty(example = "https://sentinela.com.br/dados-invalidos", position = 10)
 	private String type;
 	
 	@ApiModelProperty(example = "Dados inválidos", position = 15)

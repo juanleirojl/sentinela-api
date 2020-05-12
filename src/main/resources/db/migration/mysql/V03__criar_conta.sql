@@ -2,7 +2,7 @@
 -- Table conta
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS conta (
-          id INT NOT NULL,
+          id INT NOT NULL AUTO_INCREMENT,
           nome NVARCHAR(255) NOT NULL,
           limite DECIMAL(10,2) NOT NULL,
           saldo DECIMAL(10,2) NOT NULL,

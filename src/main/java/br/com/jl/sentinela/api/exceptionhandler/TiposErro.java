@@ -1,4 +1,4 @@
-package br.com.jl.sentinela.api;
+package br.com.jl.sentinela.api.exceptionhandler;
 
 import lombok.Getter;
 
@@ -18,7 +18,7 @@ public enum TiposErro {
 	private String uri;
 	
 	TiposErro(String path, String title) {
-		this.uri = "https://algafood.com.br" + path;
+		this.uri = "https://sentinela.com.br" + path;
 		this.title = title;
 	}
 }
