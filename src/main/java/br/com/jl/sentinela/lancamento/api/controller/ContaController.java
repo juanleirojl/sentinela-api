@@ -1,10 +1,10 @@
-package br.com.jl.sentinela.lancamento.api;
+package br.com.jl.sentinela.lancamento.api.controller;
 
-import br.com.jl.sentinela.api.Messages;
+import br.com.jl.sentinela.core.message.Messages;
 import br.com.jl.sentinela.api.ResourceUriHelper;
-import br.com.jl.sentinela.lancamento.api.doc.ContaControllerAPI;
+import br.com.jl.sentinela.lancamento.api.controller.doc.ContaControllerAPI;
 import br.com.jl.sentinela.lancamento.api.dto.ContaDTO;
-import br.com.jl.sentinela.lancamento.domain.exception.EntidadeNaoEncontradaException;
+import br.com.jl.sentinela.api.exception.EntidadeNaoEncontradaException;
 import br.com.jl.sentinela.lancamento.domain.model.Conta;
 import br.com.jl.sentinela.lancamento.domain.repository.ContaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,7 +39,7 @@ public class ContaController implements ContaControllerAPI {
 	@Override
 	@GetMapping("/{id}")
 	public ContaDTO buscar(@PathVariable Long id) {
-		return contaRepository.findById(id).map(ContaDTO::toModel).orElseThrow(() -> new EntidadeNaoEncontradaException(messages.get("entidade.nao.encontrada")));
+		return contaRepository.findById(id).map(ContaDTO::toModel).orElseThrow(() -> new EntidadeNaoEncontradaException());
 	}
 
 	@Override

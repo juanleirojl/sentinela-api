@@ -1,4 +1,4 @@
-package br.com.jl.sentinela.lancamento.domain.exception;
+package br.com.jl.sentinela.seguranca.domain.exception;
 
 public class NegocioException extends RuntimeException {
 

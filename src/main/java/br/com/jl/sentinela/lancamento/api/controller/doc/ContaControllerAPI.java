@@ -1,4 +1,4 @@
-package br.com.jl.sentinela.lancamento.api.doc;
+package br.com.jl.sentinela.lancamento.api.controller.doc;
 
 import br.com.jl.sentinela.lancamento.api.dto.ContaDTO;
 import br.com.jl.sentinela.lancamento.domain.model.Conta;

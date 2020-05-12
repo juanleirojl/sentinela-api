@@ -1,7 +1,7 @@
-package br.com.jl.sentinela.lancamento.api;
+package br.com.jl.sentinela.lancamento.api.controller;
 
 
-import br.com.jl.sentinela.lancamento.api.doc.CategoriaControllerAPI;
+import br.com.jl.sentinela.lancamento.api.controller.doc.CategoriaControllerAPI;
 import br.com.jl.sentinela.lancamento.api.dto.CategoriaDTO;
 import br.com.jl.sentinela.lancamento.api.dto.assembler.CategoriaDTOAssembler;
 import br.com.jl.sentinela.lancamento.domain.model.Categoria;

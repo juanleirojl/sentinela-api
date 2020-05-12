@@ -1,6 +1,7 @@
 package br.com.jl.sentinela.lancamento.api.dto;
 
 import br.com.jl.sentinela.lancamento.domain.model.Conta;
+import br.com.jl.sentinela.seguranca.api.dto.UsuarioDTO;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
@@ -41,6 +42,7 @@ public class ContaDTO implements Serializable{
 	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ", shape = JsonFormat.Shape.STRING)
 	private LocalDateTime dataCriacao;
 
+	private UsuarioDTO usuario;
 
 	public static ContaDTO toModel(@Valid Conta conta) {
 		return ContaDTO.builder()
@@ -48,6 +50,7 @@ public class ContaDTO implements Serializable{
 				.nome(conta.getNome())
 				.limite(conta.getLimite())
 				.saldo(conta.getSaldo())
+				.usuario(UsuarioDTO.toModel(conta.getUsuario()))
 				.dataCriacao(conta.getDataCriacao()!=null ? conta.getDataCriacao() : LocalDateTime.now() )
 				.build();
 	}

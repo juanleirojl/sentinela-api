@@ -1,8 +1,8 @@
 package br.com.jl.sentinela.lancamento.domain.model;
 
 import br.com.jl.sentinela.lancamento.api.dto.ContaDTO;
+import br.com.jl.sentinela.seguranca.domain.model.Usuario;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import io.swagger.annotations.ApiModelProperty;
 import lombok.*;
 
 import javax.persistence.*;
@@ -26,12 +26,10 @@ public class Conta {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@ApiModelProperty(example = "Nubank")
 	@NotBlank
 	@Column(nullable = false)
 	@Size(min = 3, max = 20)
 	private String nome;
-
 
 	@PositiveOrZero
 	@NotNull
@@ -43,6 +41,9 @@ public class Conta {
 	@JsonFormat(pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSZ", shape = JsonFormat.Shape.STRING)
 	private LocalDateTime dataCriacao;
 
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "idUsuario")
+	private Usuario usuario;
 
 	public static Conta toEntity(@Valid ContaDTO contaDTO) {
 		return Conta.builder()
@@ -50,7 +51,8 @@ public class Conta {
 				.nome(contaDTO.getNome())
 				.limite(contaDTO.getLimite())
 				.saldo(contaDTO.getSaldo())
-				.dataCriacao(contaDTO.getDataCriacao()!=null ? contaDTO.getDataCriacao() : LocalDateTime.now() )
+				.usuario(Usuario.toEntity(contaDTO.getUsuario()))
+				.dataCriacao(contaDTO.getDataCriacao()!=null ? contaDTO.getDataCriacao() : LocalDateTime.now())
 				.build();
 	}
 

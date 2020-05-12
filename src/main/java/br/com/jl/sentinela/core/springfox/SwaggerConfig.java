@@ -1,18 +1,12 @@
 package br.com.jl.sentinela.core.springfox;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-
+import br.com.jl.sentinela.api.exceptionhandler.Erro;
+import com.fasterxml.classmate.TypeResolver;
+import com.google.common.base.Predicate;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.RequestMethod;
-
-import com.fasterxml.classmate.TypeResolver;
-import com.google.common.base.Predicate;
-
-import br.com.jl.sentinela.api.Erro;
 import springfox.documentation.RequestHandler;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
@@ -26,6 +20,10 @@ import springfox.documentation.service.Tag;
 import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 @Configuration
 @EnableSwagger2

@@ -1,6 +1,6 @@
 package br.com.jl.sentinela.lancamento.api.dto.assembler;
 
-import br.com.jl.sentinela.lancamento.api.CategoriaController;
+import br.com.jl.sentinela.lancamento.api.controller.CategoriaController;
 import br.com.jl.sentinela.lancamento.api.dto.CategoriaDTO;
 import br.com.jl.sentinela.lancamento.domain.model.Categoria;
 import org.springframework.hateoas.server.mvc.RepresentationModelAssemblerSupport;
