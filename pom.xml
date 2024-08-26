@@ -18,7 +18,7 @@
 		<java.version>11</java.version>
 		<maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>
 		<modelmapper.version>2.3.7</modelmapper.version>
-		<springfox.version>2.9.2</springfox.version>
+		<springfox.version>2.10.0</springfox.version>
 		<logback-ext-loggly.version>0.1.5</logback-ext-loggly.version>
 	</properties>
 
